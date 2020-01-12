@@ -32,16 +32,14 @@ function get(id) {
 
 function light(callback) {
   green(function() {
-    green(function() {
-      yellow(function() {
+    yellow(function() {
+      red(function() {
         red(function() {
           red(function() {
-            red(function() {
-              red(function() {
-                red();
-                yellow(function() {
-                  callback(callback);
-                });
+            red();
+            yellow(function() {
+              green(function() {
+                callback(callback);
               });
             });
           });
@@ -54,16 +52,16 @@ light(light);
 
 function light2(callback) {
   red2(function() {
-    red2(function() {
-      red2(function() {
-        yellow2();
-        red2(function() {
+    red2();
+    yellow2(function() {
+      green2(function() {
+        green2(function() {
           green2(function() {
-            green2(function() {
-              yellow2(function() {
-                red2(function() {
-                  callback(callback);
-                });
+            green2();
+            red2();
+            yellow2(function() {
+              red2(function() {
+                callback(callback);
               });
             });
           });
